@@ -1,0 +1,185 @@
+/* Particles */
+.particle {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    animation: float 5s ease-in-out infinite;
+}
+
+.particle-light {
+    background: rgba(147, 197, 253, 0.3);
+}
+
+.particle-dark {
+    background: rgba(96, 165, 250, 0.2);
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0) translateX(0);
+        opacity: 0.3;
+    }
+    50% {
+        transform: translateY(-30px) translateX(10px);
+        opacity: 0.6;
+    }
+}
+
+/* Screen glow */
+.screen-glow {
+    opacity: 0.9;
+    animation: glow 2s ease-in-out infinite;
+}
+
+@keyframes glow {
+    0%, 100% { opacity: 0.7; }
+    50% { opacity: 1; }
+}
+
+/* Code lines */
+.code-lines {
+    animation: blink 1.5s ease-in-out infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 0.8; }
+    50% { opacity: 1; }
+}
+
+/* Arms typing */
+.arm-left {
+    transform-origin: 375px 425px;
+    animation: type-left 0.6s ease-in-out infinite;
+}
+
+.arm-right {
+    transform-origin: 425px 425px;
+    animation: type-right 0.6s ease-in-out infinite;
+}
+
+@keyframes type-left {
+    0%, 100% { transform: rotate(-3deg); }
+    50% { transform: rotate(3deg); }
+}
+
+@keyframes type-right {
+    0%, 100% { transform: rotate(3deg); }
+    50% { transform: rotate(-3deg); }
+}
+
+/* Sun */
+.sun {
+    animation: sun-pulse 3s ease-in-out infinite;
+}
+
+@keyframes sun-pulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 0.9;
+    }
+    50% {
+        transform: scale(1.05);
+        opacity: 1;
+    }
+}
+
+/* Moon */
+.moon {
+    animation: moon-glow 2s ease-in-out infinite;
+}
+
+@keyframes moon-glow {
+    0%, 100% { opacity: 0.8; }
+    50% { opacity: 1; }
+}
+
+/* Stars */
+.star {
+    animation: twinkle 1.5s ease-in-out infinite;
+}
+
+@keyframes twinkle {
+    0%, 100% {
+        opacity: 0.3;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+}
+
+/* Steam */
+.steam {
+    opacity: 0.6;
+    animation: steam-rise 2s ease-in-out infinite;
+}
+
+@keyframes steam-rise {
+    0% {
+        transform: translateY(0);
+        opacity: 0.6;
+    }
+    100% {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+}
+
+/* Lamp glow */
+.lamp-glow {
+    animation: lamp-pulse 2s ease-in-out infinite;
+}
+
+@keyframes lamp-pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+/* Plant sway */
+.plant {
+    transform-origin: 620px 450px;
+    animation: sway 3s ease-in-out infinite;
+}
+
+@keyframes sway {
+    0%, 100% { transform: rotate(-2deg); }
+    50% { transform: rotate(2deg); }
+}
+
+/* Coffee cup bounce */
+.coffee-cup {
+    animation: bounce 3s ease-in-out infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-2px); }
+}
+
+/* Animated gradient overlays for depth */
+.light-overlay {
+    background: linear-gradient(45deg,
+    rgba(139, 92, 246, 0.1) 0%,
+    rgba(59, 130, 246, 0.1) 50%,
+    rgba(167, 139, 250, 0.1) 100%);
+    animation: gradientShift 15s ease infinite;
+}
+
+.dark-overlay {
+    background: linear-gradient(45deg,
+    rgba(59, 130, 246, 0.2) 0%,
+    rgba(139, 92, 246, 0.2) 50%,
+    rgba(99, 102, 241, 0.2) 100%);
+    animation: gradientShift 15s ease infinite;
+}
+
+@keyframes gradientShift {
+    0%, 100% {
+        opacity: 0.3;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}

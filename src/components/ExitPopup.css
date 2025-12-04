@@ -1,0 +1,231 @@
+/* Overlay */
+.exit-popup-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    animation: fadeIn 0.3s ease-out;
+}
+
+/* Popup */
+.exit-popup {
+    position: relative;
+    background: white;
+    border-radius: 1.5rem;
+    padding: 2rem;
+    max-width: 500px;
+    width: 90%;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    animation: popupSlideIn 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@media (prefers-color-scheme: dark) {
+    .exit-popup {
+        background: #1f2937;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes popupSlideIn {
+    from {
+        transform: scale(0.9) translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1) translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Close button */
+.exit-popup-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: transparent;
+    border: none;
+    color: #6b7280;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    transition: all 0.2s;
+}
+
+.exit-popup-close:hover {
+    background: #f3f4f6;
+    color: #1f2937;
+}
+
+@media (prefers-color-scheme: dark) {
+    .exit-popup-close {
+        color: #9ca3af;
+    }
+    .exit-popup-close:hover {
+        background: #374151;
+        color: #f3f4f6;
+    }
+}
+
+/* Content */
+.exit-popup-content {
+    text-align: center;
+}
+
+.exit-popup-title {
+    font-size: 1.875rem;
+    font-weight: bold;
+    color: #1f2937;
+    margin-bottom: 0.5rem;
+}
+
+@media (prefers-color-scheme: dark) {
+    .exit-popup-title {
+        color: white;
+    }
+}
+
+.exit-popup-subtitle {
+    font-size: 1.125rem;
+    color: #6b7280;
+    margin-bottom: 2rem;
+}
+
+@media (prefers-color-scheme: dark) {
+    .exit-popup-subtitle {
+        color: #9ca3af;
+    }
+}
+
+/* Star Rating */
+.star-rating {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.star-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition: transform 0.2s;
+}
+
+.star-button:hover {
+    transform: scale(1.2);
+}
+
+.star-button:active {
+    transform: scale(1.1);
+}
+
+/* Feedback */
+.feedback-section {
+    animation: slideDown 0.3s ease-out;
+    margin-bottom: 1.5rem;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        max-height: 0;
+    }
+    to {
+        opacity: 1;
+        max-height: 200px;
+    }
+}
+
+.feedback-textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    resize: none;
+    font-family: inherit;
+    transition: border-color 0.2s;
+}
+
+.feedback-textarea:focus {
+    outline: none;
+    border-color: #3b82f6;
+    ring: 2px;
+    ring-color: rgba(59, 130, 246, 0.3);
+}
+
+@media (prefers-color-scheme: dark) {
+    .feedback-textarea {
+        background: #374151;
+        border-color: #4b5563;
+        color: white;
+    }
+}
+
+/* Buttons */
+.exit-popup-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.submit-button {
+    flex: 1;
+    background: #3b82f6;
+    color: white;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 0.75rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.submit-button:hover:not(:disabled) {
+    background: #2563eb;
+    transform: scale(1.02);
+}
+
+.submit-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.skip-button {
+    flex: 1;
+    background: transparent;
+    color: #6b7280;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    border: 2px solid #d1d5db;
+    border-radius: 0.75rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.skip-button:hover {
+    background: #f3f4f6;
+    border-color: #9ca3af;
+}
+
+@media (prefers-color-scheme: dark) {
+    .skip-button {
+        color: #9ca3af;
+        border-color: #4b5563;
+    }
+    .skip-button:hover {
+        background: #374151;
+        border-color: #6b7280;
+    }
+}

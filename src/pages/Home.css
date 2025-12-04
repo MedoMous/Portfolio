@@ -1,0 +1,193 @@
+/* Smooth scrolling for the page */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px; /* Account for navbar */
+}
+
+/* Smoother scroll with easing */
+* {
+    scroll-behavior: smooth;
+}
+
+/* Landing page wrapper */
+.landing-page {
+    position: relative;
+}
+
+/* Shared gradient background for landing page */
+.landing-background {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(to bottom right,
+    #DBEAFE,
+    #E9D5FF,
+    #FCE7F3
+    );
+    transition: all 1s;
+}
+
+.dark .landing-background {
+    background: linear-gradient(to bottom right,
+    #111827,
+    #1E3A8A,
+    #581C87
+    );
+}
+
+.landing-background::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    opacity: 0.3;
+    animation: gradientShift 15s ease infinite;
+    background: linear-gradient(45deg,
+    rgba(139, 92, 246, 0.1) 0%,
+    rgba(59, 130, 246, 0.1) 50%,
+    rgba(167, 139, 250, 0.1) 100%
+    );
+}
+
+.dark .landing-background::after {
+    background: linear-gradient(45deg,
+    rgba(59, 130, 246, 0.2) 0%,
+    rgba(139, 92, 246, 0.2) 50%,
+    rgba(99, 102, 241, 0.2) 100%
+    );
+}
+
+@keyframes gradientShift {
+    0%, 100% {
+        opacity: 0.3;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+/* Hero section */
+.hero-section {
+    position: relative;
+    z-index: 1;
+}
+
+/* Fade in animation for entire section */
+.fade-in {
+    animation: fadeIn 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Slide in animations with delays */
+.slide-in-1 {
+    animation: slideIn 0.6s ease-out 0.3s backwards;
+}
+
+.slide-in-2 {
+    animation: slideIn 0.8s ease-out 0.5s backwards;
+}
+
+.slide-in-3 {
+    animation: slideIn 0.6s ease-out 0.8s backwards;
+}
+
+.slide-in-4 {
+    animation: slideIn 0.6s ease-out 1.2s backwards;
+}
+
+.slide-in-5 {
+    animation: slideInUp 0.6s ease-out 1.5s backwards;
+}
+
+.slide-in-6 {
+    animation: slideIn 0.6s ease-out 1.8s backwards;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Arrow bounce animation */
+.arrow-bounce {
+    display: inline-block;
+    animation: arrowBounce 1.5s ease-in-out infinite;
+}
+
+@keyframes arrowBounce {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(5px);
+    }
+}
+
+/* Scroll indicator bounce */
+.scroll-indicator {
+    animation: scrollBounce 1.5s ease-in-out infinite;
+}
+
+@keyframes scrollBounce {
+    0%, 100% {
+        transform: translate(-50%, 0);
+    }
+    50% {
+        transform: translate(-50%, 10px);
+    }
+}
+
+/* Social icon hover effect */
+.social-icon {
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* Gradient text animation */
+.bg-clip-text {
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientShift 3s ease-in-out infinite;
+}
+
+@keyframes gradientShift {
+    0%, 100% {
+        filter: hue-rotate(0deg);
+    }
+    50% {
+        filter: hue-rotate(10deg);
+    }
+}
+.view-my-projects-button{
+    color: #667eea;
+    background: rgba(31, 41, 55, 0.4);
+    border-color: #667eea;
+}

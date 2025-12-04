@@ -1,0 +1,69 @@
+/* Mobile menu container */
+.mobile-menu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out, opacity 0.3s ease-in-out;
+    opacity: 0;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(229, 231, 235, 0.5);
+}
+
+.dark .mobile-menu {
+    background: rgba(17, 24, 39, 0.95);
+    border-bottom: 1px solid rgba(75, 85, 99, 0.5);
+}
+
+/* Mobile menu open state */
+.mobile-menu-open {
+    max-height: 100px;
+    opacity: 1;
+}
+
+/* Mobile menu items with stagger animation */
+.mobile-menu-item {
+    animation: slideInFromTop 0.4s ease-out backwards;
+    font-size: 0.875rem;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.mobile-menu-open .mobile-menu-item:nth-child(1) {
+    animation-delay: 0.05s;
+}
+
+.mobile-menu-open .mobile-menu-item:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.mobile-menu-open .mobile-menu-item:nth-child(3) {
+    animation-delay: 0.15s;
+}
+
+.mobile-menu-open .mobile-menu-item:nth-child(4) {
+    animation-delay: 0.2s;
+}
+
+@keyframes slideInFromTop {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Hover effect for mobile menu items */
+.mobile-menu-item:active {
+    transform: scale(0.95);
+}
+
+/* Ensure menu doesn't interfere with content */
+@media (min-width: 768px) {
+    .mobile-menu {
+        display: none !important;
+    }
+}

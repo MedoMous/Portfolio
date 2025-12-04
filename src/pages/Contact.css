@@ -1,0 +1,248 @@
+/* Base container styling with animated gradient background */
+.contact-container {
+    position: relative;
+    min-height: 100vh;
+    padding-top: 5rem;
+    z-index: 1;
+}
+
+/* Beautiful gradient background - matches AnimatedBackground */
+.contact-container::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    transition: all 1s;
+    pointer-events: none;
+}
+
+/* Light mode gradient - soft pastels like your image! */
+.contact-container::before {
+    background: linear-gradient(to bottom right,
+    #DBEAFE,      /* blue-100 */
+    #E9D5FF,      /* purple-100 */
+    #FCE7F3       /* pink-100 */
+    );
+}
+
+/* Dark mode gradient */
+.dark .contact-container::before {
+    background: linear-gradient(to bottom right,
+    #111827,      /* gray-900 */
+    #1E3A8A,      /* blue-900 */
+    #581C87       /* purple-900 */
+    );
+}
+
+/* Animated gradient overlay for extra depth */
+.contact-container::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    opacity: 0.3;
+    animation: gradientShift 15s ease infinite;
+    pointer-events: none;
+    background: linear-gradient(45deg,
+    rgba(139, 92, 246, 0.1) 0%,
+    rgba(59, 130, 246, 0.1) 50%,
+    rgba(167, 139, 250, 0.1) 100%
+    );
+}
+
+.dark .contact-container::after {
+    background: linear-gradient(45deg,
+    rgba(59, 130, 246, 0.2) 0%,
+    rgba(139, 92, 246, 0.2) 50%,
+    rgba(99, 102, 241, 0.2) 100%
+    );
+}
+
+@keyframes gradientShift {
+    0%, 100% {
+        opacity: 0.3;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+/* Floating particles */
+.particle {
+    position: fixed;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    animation: float 5s ease-in-out infinite;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.particle-light {
+    background: rgba(147, 197, 253, 0.3);
+}
+
+.particle-dark {
+    background: rgba(96, 165, 250, 0.2);
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0) translateX(0);
+        opacity: 0.3;
+    }
+    50% {
+        transform: translateY(-30px) translateX(10px);
+        opacity: 0.6;
+    }
+}
+
+/* Glass effect for forms - like project cards */
+.contact-form-glass {
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 0.5px solid rgba(102, 126, 234, 0.3);
+    box-shadow: 0 8px 32px rgba(102, 126, 234, 0.1);
+    transition: all 0.3s ease;
+}
+
+.contact-form-glass:hover {
+    border-color: rgba(102, 126, 234, 0.5);
+    box-shadow: 0 12px 48px rgba(102, 126, 234, 0.2);
+}
+
+.dark .contact-form-glass {
+    background: rgba(31, 41, 55, 0.4);
+    border: 0.5px solid rgba(102, 126, 234, 0.5);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.dark .contact-form-glass:hover {
+    background: rgba(31, 41, 55, 0.6);
+    box-shadow: 0 12px 48px rgba(102, 126, 234, 0.4);
+}
+.input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border-radius: 25px;
+    border: none;
+    background: rgba(255, 255, 255, 0.25);
+    color: #111827;
+    backdrop-filter: blur(12px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+    &:focus {
+        outline: none;
+        ring: 2px solid #3b82f6; /* blue-500 */
+        ring-offset: 2px;
+        border-color: transparent;
+    }
+    &::selection{
+        border: transparent;
+    }
+    @media (prefers-color-scheme: dark) {
+        border: none; /* gray-600 */
+        background: rgba(31, 41, 55, 0.4); /* gray-700 */
+        color: white;
+    }
+
+/* FAQ Section Glass Effect */
+.faq-glass {
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 0.5px solid rgba(102, 126, 234, 0.3);
+    box-shadow: 0 8px 32px rgba(102, 126, 234, 0.1);
+}
+
+.dark .faq-glass {
+    background: rgba(31, 41, 55, 0.4);
+    border: 0.5px solid rgba(102, 126, 234, 0.5);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* Animations */
+.fade-in {
+    animation: fadeIn 0.8s ease-out;
+}
+
+.slide-in-left {
+    animation: slideInLeft 0.8s ease-out;
+}
+
+.slide-in-right {
+    animation: slideInRight 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Success message animation */
+.success-message {
+    animation: successPulse 0.5s ease-out;
+}
+
+@keyframes successPulse {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* FAQ answer slide down */
+.faq-answer {
+    animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        max-height: 0;
+    }
+    to {
+        opacity: 1;
+        max-height: 200px;
+    }
+}
+
+.button{
+
+}
