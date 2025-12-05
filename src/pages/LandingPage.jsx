@@ -6,6 +6,7 @@ import Projects from './Projects';
 import About from './About';
 import Contact from './Contact';
 import './Home.css';
+import ProfilePic from '../assets/pp.jpg'
 
 function LandingPage() {
     const [showProgrammer, setShowProgrammer] = useState(true);
@@ -89,17 +90,23 @@ function LandingPage() {
                 </div>
 
                 {/* Content Overlay */}
-                <div className="relative z-10 min-h-screen flex items-center justify-center px-4">
+                <div className="relative z-10 min-h-screen flex items-center justify-center px-4 mt-10">
                     <div className="container mx-auto">
                         <div className="max-w-4xl mx-auto text-center fade-in">
-
+                            <div className="picture-container mb-2 mt-auto">
+                                <img
+                                    src={ProfilePic}
+                                    alt="Mous Mohammed"
+                                    className="picture"
+                                />
+                            </div>
                             {/* Greeting */}
                             <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-4 font-light slide-in-1">
                                 السلام عليكم, I'm
                             </p>
 
                             {/* Name */}
-                            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 slide-in-2">
+                            <h1 className="text-5xl md:text-6xl lg:text-8xl font-bold mb-4 slide-in-2">
                                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400">
                                     Mous Mohammed
                                 </span>
@@ -161,7 +168,7 @@ function LandingPage() {
                             </div>
 
                             {/* Social Links */}
-                            <div className="flex gap-6 justify-center slide-in-6">
+                            <div className="flex gap-6 justify-center slide-in-6 mb-10">
                                 <a href="https://github.com/MedoMous"
                                    target="_blank"
                                    rel="noopener noreferrer"

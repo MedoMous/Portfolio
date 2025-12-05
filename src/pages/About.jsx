@@ -11,7 +11,7 @@ function About({ isLanding = false }) {
                 { name: "React", level: 85 },
                 { name: "JavaScript", level: 80 },
                 { name: "HTML/CSS", level: 90 },
-                { name: "Tailwind CSS", level: 85 },
+                { name: "Tailwind CSS", level: 75 },
             ]
         },
         {
@@ -22,7 +22,7 @@ function About({ isLanding = false }) {
                 { name: "Java", level: 90 },
                 { name: "Spring Boot", level: 85 },
                 { name: "REST APIs", level: 85 },
-                { name: "Node.js", level: 70 },
+                { name: "Node.js", level: 55 },
             ]
         },
         {
@@ -30,7 +30,7 @@ function About({ isLanding = false }) {
             icon: <Database className="w-6 h-6" />,
             color: "purple",
             items: [
-                { name: "Oracle (PL/SQL)", level: 65 },
+                { name: "Oracle (PL/SQL)", level: 55 },
                 { name: "PostgreSQL", level: 85 },
                 { name: "SQL", level: 90 },
                 { name: "Database Design", level: 70 },
@@ -43,7 +43,7 @@ function About({ isLanding = false }) {
             items: [
                 { name: "Flutter", level: 75 },
                 { name: "Dart", level: 90 },
-                { name: "Mobile UI/UX", level: 80 },
+                { name: "Mobile UI/UX", level: 70 },
             ]
         },
         {
@@ -59,7 +59,7 @@ function About({ isLanding = false }) {
 
     const timeline = [
         {
-            year: "2024",
+            year: "2025",
             title: "Full-Stack Developer Journey",
             description: "Moved to Kraków, Poland. Mastered Spring Boot, React, and PostgreSQL. Built multiple full-stack projects including e-commerce platforms and this portfolio.",
             icon: "🚀"
@@ -67,7 +67,7 @@ function About({ isLanding = false }) {
         {
             year: "2023-2024",
             title: "Expanding Tech Stack",
-            description: "Learned Flutter for mobile development, explored machine learning, and automation with n8n. Built various projects combining frontend and backend technologies.",
+            description: "Learned Flutter for mobile development, explored what is React. Built various projects combining frontend and backend technologies.",
             icon: "📱"
         },
         {
@@ -77,9 +77,9 @@ function About({ isLanding = false }) {
             icon: "🗄️"
         },
         {
-            year: "Early Journey",
+            year: "2022",
             title: "Beginning in Tech",
-            description: "Started with Java programming and fell in love with building things. Discovered passion for creating elegant solutions to real-world problems.",
+            description: "Started with C/Java programming and fell in love with building things. Discovered passion for creating elegant solutions to real-world problems.",
             icon: "💡"
         }
     ];
