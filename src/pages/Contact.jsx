@@ -47,7 +47,7 @@ function Contact() {
         setContactStatus('sending');
 
         try {
-            const response = await fetch('http://localhost:8080/api/v1/contacts', {
+            const response = await fetch('portfolio-backend-production-afec.up.railway.app', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(contactForm)
@@ -71,7 +71,7 @@ function Contact() {
         setQuestionStatus('sending');
 
         try {
-            const response = await fetch('http://localhost:8080/api/v1/questions', {
+            const response = await fetch('portfolio-backend-production-afec.up.railway.app', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(questionForm)
