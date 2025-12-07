@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { X, Star } from 'lucide-react';
-import './ExitPopup.css';
+import './styles/ExitPopup.css';
 
 function ExitPopup() {
     const [isVisible, setIsVisible] = useState(false);

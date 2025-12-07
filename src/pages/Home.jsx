@@ -5,7 +5,7 @@ import TypewriterText from '../components/TypewriterText.jsx';
 import Projects from './Projects';
 import About from './About';
 import Contact from './Contact';
-import './Home.css';
+import './styles/Home.css';
 
 function LandingPage() {
     const [showProgrammer, setShowProgrammer] = useState(true);

@@ -242,4 +242,37 @@
         max-height: 200px;
     }
 }
+/* Star button hover effect */
+.star-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition: transform 0.2s;
+}
 
+.star-button:hover {
+    transform: scale(1.25);
+}
+
+.star-button:active {
+    transform: scale(1.15);
+}
+
+/* Feedback section slide down */
+.feedback-section {
+    animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        max-height: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        max-height: 500px;
+        transform: translateY(0);
+    }
+}

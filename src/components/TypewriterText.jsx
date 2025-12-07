@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import './TypewriterText.css';
+import './styles/TypewriterText.css';
 
 function TypewriterText({ text, delay = 100 }) {
     const [displayText, setDisplayText] = useState('');

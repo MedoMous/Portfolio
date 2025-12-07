@@ -1,6 +1,6 @@
 import { useLocation } from 'react-router-dom';
 import { useTheme } from '../context/ThemeContext';
-import './AnimatedBackground.css';
+import './styles/AnimatedBackground.css';
 
 function AnimatedBackground() {
     const { theme } = useTheme();

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Github, ExternalLink, Rocket, Zap, Smartphone, Lightbulb } from 'lucide-react';
-import './Projects.css';
+import './styles/Projects.css';
 
 function Projects() {
     const [activeFilter, setActiveFilter] = useState('all');

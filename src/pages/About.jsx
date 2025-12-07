@@ -1,5 +1,5 @@
 import { Code, Database, Smartphone, Server, Globe, Award, Coffee, Heart } from 'lucide-react';
-import './About.css';
+import './styles/About.css';
 
 function About({ isLanding = false }) {
     const skills = [
