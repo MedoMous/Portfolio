@@ -72,6 +72,7 @@ function LandingPage() {
 
     return (
         <div className="landing-page">
+            <title>Mous Mohammed</title>
             {/* Shared gradient background for all sections */}
             <div className="landing-background"></div>
 
