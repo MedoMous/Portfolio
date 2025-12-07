@@ -213,7 +213,7 @@ function Contact() {
                             <button
                                 type="submit"
                                 disabled={contactStatus === 'sending'}
-                                className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-lg transition transform hover:scale-105 flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                                className="button"
                             >
                                 <Send className="w-5 h-5" />
                                 {contactStatus === 'sending' ? 'Sending...' : 'Send Message'}
@@ -286,7 +286,7 @@ function Contact() {
                             <button
                                 type="submit"
                                 disabled={questionStatus === 'sending'}
-                                className="w-full font-semibold py-3 rounded-lg transition transform hover:scale-105 flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                                className="button"
                             >
                                 <MessageCircle className="w-5 h-5" />
                                 {questionStatus === 'sending' ? 'Sending...' : 'Ask Question'}
@@ -389,7 +389,7 @@ function Contact() {
                                 onChange={(e) => setRatingFeedback(e.target.value)}
                                 placeholder="Tell me what you think..."
                                 rows="4"
-                                className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white/60 dark:bg-gray-700/60 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent transition resize-none backdrop-blur-sm"
+                                className="input"
                             />
                         </div>
                     )}
@@ -399,7 +399,7 @@ function Contact() {
                         <button
                             onClick={handleRatingSubmit}
                             disabled={rating === 0 || ratingStatus === 'sending'}
-                            className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-3 rounded-lg transition-all transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+                            className="button"
                         >
                             {ratingStatus === 'sending' ? 'Submitting...' : 'Submit Rating'}
                         </button>
