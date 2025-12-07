@@ -340,82 +340,82 @@ function Contact() {
                             </div>
                         ))}
                     </div>
-                    {/* Rating Section */}
-                    <div className="contact-form-glass rounded-2xl shadow-xl p-8 mb-16 fade-in">
-                        <h2 className="text-3xl font-bold mb-4 text-center text-gray-900 dark:text-white">
-                            Rate Your Experience
-                        </h2>
-                        <p className="text-center text-gray-600 dark:text-gray-300 mb-8">
-                            How was your experience exploring my portfolio?
-                        </p>
-                        {/* Star Rating */}
-                        <div className="flex justify-center gap-3 mb-6">
-                            {[1, 2, 3, 4, 5].map((star) => (
-                                <button
-                                    key={star}
-                                    type="button"
-                                    onClick={() => setRating(star)}
-                                    onMouseEnter={() => setHoveredStar(star)}
-                                    onMouseLeave={() => setHoveredStar(0)}
-                                    className="star-button transition-transform hover:scale-125"
-                                >
-                                    <Star
-                                        className={`w-12 h-12 md:w-14 md:h-14 transition-all ${
-                                            star <= (hoveredStar || rating)
-                                                ? 'fill-yellow-400 text-yellow-400'
-                                                : 'text-gray-300 dark:text-gray-600'
-                                        }`}
-                                    />
-                                </button>
-                            ))}
-                        </div>
-
-                        {/* Show selected rating */}
-                        {rating > 0 && (
-                            <p className="text-center text-sm text-gray-600 dark:text-gray-400 mb-4">
-                                You selected {rating} star{rating !== 1 ? 's' : ''}
-                            </p>
-                        )}
-
-                        {/* Optional Feedback */}
-                        {rating > 0 && (
-                            <div className="max-w-2xl mx-auto mb-6 feedback-section">
-                                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                                    Any feedback? (optional)
-                                </label>
-                                <textarea
-                                    value={ratingFeedback}
-                                    onChange={(e) => setRatingFeedback(e.target.value)}
-                                    placeholder="Tell me what you think..."
-                                    rows="4"
-                                    className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white/60 dark:bg-gray-700/60 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent transition resize-none backdrop-blur-sm"
-                                />
-                            </div>
-                        )}
-
-                        {/* Submit Button */}
-                        <div className="flex justify-center">
+                </div>
+                {/* Rating Section */}
+                <div className="contact-form-glass rounded-2xl shadow-xl p-8 mb-16 fade-in">
+                    <h2 className="text-3xl font-bold mb-4 text-center text-gray-900 dark:text-white">
+                        Rate Your Experience
+                    </h2>
+                    <p className="text-center text-gray-600 dark:text-gray-300 mb-8">
+                        How was your experience exploring my portfolio?
+                    </p>
+                    {/* Star Rating */}
+                    <div className="flex justify-center gap-3 mb-6">
+                        {[1, 2, 3, 4, 5].map((star) => (
                             <button
-                                onClick={handleRatingSubmit}
-                                disabled={rating === 0 || ratingStatus === 'sending'}
-                                className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-3 rounded-lg transition-all transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+                                key={star}
+                                type="button"
+                                onClick={() => setRating(star)}
+                                onMouseEnter={() => setHoveredStar(star)}
+                                onMouseLeave={() => setHoveredStar(0)}
+                                className="star-button transition-transform hover:scale-125"
                             >
-                                {ratingStatus === 'sending' ? 'Submitting...' : 'Submit Rating'}
+                                <Star
+                                    className={`w-12 h-12 md:w-14 md:h-14 transition-all ${
+                                        star <= (hoveredStar || rating)
+                                            ? 'fill-yellow-400 text-yellow-400'
+                                            : 'text-gray-300 dark:text-gray-600'
+                                    }`}
+                                />
                             </button>
-                        </div>
-
-                        {/* Status Messages */}
-                        {ratingStatus === 'success' && (
-                            <p className="text-green-600 dark:text-green-400 text-center mt-4 success-message">
-                                ✓ Thank you for your feedback!
-                            </p>
-                        )}
-                        {ratingStatus === 'error' && (
-                            <p className="text-red-600 dark:text-red-400 text-center mt-4">
-                                ✗ Failed to submit. Please try again.
-                            </p>
-                        )}
+                        ))}
                     </div>
+
+                    {/* Show selected rating */}
+                    {rating > 0 && (
+                        <p className="text-center text-sm text-gray-600 dark:text-gray-400 mb-4">
+                            You selected {rating} star{rating !== 1 ? 's' : ''}
+                        </p>
+                    )}
+
+                    {/* Optional Feedback */}
+                    {rating > 0 && (
+                        <div className="max-w-2xl mx-auto mb-6 feedback-section">
+                            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                                Any feedback? (optional)
+                            </label>
+                            <textarea
+                                value={ratingFeedback}
+                                onChange={(e) => setRatingFeedback(e.target.value)}
+                                placeholder="Tell me what you think..."
+                                rows="4"
+                                className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white/60 dark:bg-gray-700/60 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent transition resize-none backdrop-blur-sm"
+                            />
+                        </div>
+                    )}
+
+                    {/* Submit Button */}
+                    <div className="flex justify-center">
+                        <button
+                            onClick={handleRatingSubmit}
+                            disabled={rating === 0 || ratingStatus === 'sending'}
+                            className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-3 rounded-lg transition-all transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+                        >
+                            {ratingStatus === 'sending' ? 'Submitting...' : 'Submit Rating'}
+                        </button>
+                    </div>
+
+                    {/* Status Messages */}
+                    {ratingStatus === 'success' && (
+                        <p className="text-green-600 dark:text-green-400 text-center mt-4 success-message">
+                            ✓ Thank you for your feedback!
+                        </p>
+                    )}
+                    {ratingStatus === 'error' && (
+                        <p className="text-red-600 dark:text-red-400 text-center mt-4">
+                            ✗ Failed to submit. Please try again.
+                        </p>
+                    )}
                 </div>
 
                 {/* Contact Info */}
