@@ -1,7 +1,8 @@
 import { useState } from 'react';
-import { Mail, MapPin, Send, MessageCircle, ChevronDown } from 'lucide-react';
+import { Mail, MapPin, Send, MessageCircle, ChevronDown, Star } from 'lucide-react';
 import './styles/Contact.css';
 import './styles/ButtonStyles.css'
+
 function Contact() {
     const [contactForm, setContactForm] = useState({
         name: '',
