@@ -184,7 +184,7 @@ function LandingPage() {
                                    aria-label="LinkedIn">
                                     <Linkedin className="w-6 h-6 text-gray-700 dark:text-gray-300" />
                                 </a>
-                                <a href="mailto:your.email@example.com"
+                                <a href="mailto:mousmohamed719@gmail.com"
                                    className="p-3 bg-gray-100 dark:bg-gray-800 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-all transform hover:scale-110 social-icon"
                                    aria-label="Email">
                                     <Mail className="w-6 h-6 text-gray-700 dark:text-gray-300" />
