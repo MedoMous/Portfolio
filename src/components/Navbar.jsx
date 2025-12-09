@@ -31,6 +31,9 @@ function Navbar() {
                         <Link to="/contact" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition">
                             Contact
                         </Link>
+                        <Link to="/reviews" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition">
+                            Reviews
+                        </Link>
                         <ThemeToggle />
                     </div>
 
@@ -43,20 +46,43 @@ function Navbar() {
                     </div>
                 </div>
 
-                {/* Mobile Menu */}
+                {/* Mobile Menu - HORIZONTAL */}
                 {isOpen && (
-                    <div className="md:hidden py-4 space-y-4 flex-row items-center">
-                        <Link to="/" className="block text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">
+                    <div className="md:hidden py-4 flex flex-wrap justify-center items-center gap-4">
+                        <Link
+                            to="/"
+                            onClick={() => setIsOpen(false)}
+                            className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition"
+                        >
                             Home
                         </Link>
-                        <Link to="/about" className="block text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">
+                        <Link
+                            to="/about"
+                            onClick={() => setIsOpen(false)}
+                            className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition"
+                        >
                             About
                         </Link>
-                        <Link to="/projects" className="block text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">
+                        <Link
+                            to="/projects"
+                            onClick={() => setIsOpen(false)}
+                            className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition"
+                        >
                             Projects
                         </Link>
-                        <Link to="/contact" className="block text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">
+                        <Link
+                            to="/contact"
+                            onClick={() => setIsOpen(false)}
+                            className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition"
+                        >
                             Contact
+                        </Link>
+                        <Link
+                            to="/reviews"
+                            onClick={() => setIsOpen(false)}
+                            className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition"
+                        >
+                            Reviews
                         </Link>
                     </div>
                 )}

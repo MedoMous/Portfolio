@@ -93,7 +93,7 @@ function LandingPage() {
                             <div className="flex flex-wrap gap-4 justify-center mb-12 slide-in-5">
                                 <button
                                     onClick={scrollToProjects}
-                                    className="group bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all transform hover:scale-105 shadow-lg hover:shadow-xl">
+                                    className="button">
                                     View My Work
                                     <span className="inline-block ml-2 arrow-bounce">→</span>
                                 </button>

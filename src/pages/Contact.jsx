@@ -399,7 +399,7 @@ function Contact() {
                         <button
                             onClick={handleRatingSubmit}
                             disabled={rating === 0 || ratingStatus === 'sending'}
-                            className="button"
+                            className="border-2 border-blue-600 dark:border-blue-400 text-blue-600 dark:text-blue-400 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-all shadow-lg hover:shadow-xl transform hover:scale-105"
                         >
                             {ratingStatus === 'sending' ? 'Submitting...' : 'Submit Rating'}
                         </button>
